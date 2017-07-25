@@ -50,6 +50,12 @@ public class GuestbooksVo {
 	public GuestbooksVo() {
 
 	}
+	
+
+	public GuestbooksVo(String password) {
+		
+		this.password = password;
+	}
 
 	public GuestbooksVo(String name, String password, String content) {
 		

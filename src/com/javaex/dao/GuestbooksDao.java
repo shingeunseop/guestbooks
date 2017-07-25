@@ -117,4 +117,42 @@ public class GuestbooksDao {
 		return list;
 
 }
+	public int delete(GuestbooksVo vo) {
+		
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url="jdbc:oracle:thin:@localhost:1521:xe";
+			conn=DriverManager.getConnection(url,"webdb","webdb");
+			System.out.println("접속성공");
+			
+			String query="delete from guestbooks "
+					+"where password=?";
+			
+			pstmt=conn.prepareStatement(query);
+			pstmt.setString(1, vo.getPassword());
+			pstmt.executeQuery();
+			
+		}catch(ClassNotFoundException e) {
+			System.out.println("error:드라이벌딩 실패."+e);
+		}catch(SQLException e) {
+			System.out.println("error"+e);
+		}finally {
+			try {
+				if(pstmt!=null) {
+					pstmt.close();
+				}
+				if(conn!=null) {
+					conn.close();
+				}
+			}catch(SQLException e) {
+				System.out.println("error:"+e);
+			}
+
+	}
+		return 0;
+		
+	}
 }

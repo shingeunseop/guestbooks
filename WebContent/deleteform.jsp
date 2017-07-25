@@ -8,7 +8,7 @@
 </head>
 <body>
       <form method="post",action="delete.php">
-      <input type='hodden' name="id" value="">
+      <input type='hidden' name="id" value="">
       <table>
             <tr>
                  <td>비밀번호</td>
