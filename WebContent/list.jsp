@@ -21,12 +21,12 @@ pageEncoding="UTF-8"%>
 			<td>비밀번호</td><td><input type="password" name="ps" value=""></td>
 		</tr>
 		<tr>
-			<td colspan=4><textarea name="co" value="" cols=60 rows=5></textarea></td>
+			<td colspan=4><textarea type="content" name="co" value="" cols=60 rows=5></textarea></td>
 		</tr>
 		<tr>
 			<td colspan=4 align=right><input type="submit" VALUE=" 확인 "></td>
 			<%
-			String rst=list.add(e);
+			String rst=list.add(list.size());
 			%>
 		</tr>
 	</table>
