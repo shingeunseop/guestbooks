@@ -27,10 +27,11 @@ public class GuestbooksDao {
 			System.out.println("접속성공");
 
 			// 3.SQLE 테스트문
-			String query = "select no, name, content, sysdate from guestbooks order by no desc";
+			String query = "insert into guestbooks values(seq_no.nextval,'?','?','?',sysdate)";
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, vo.getName());
 			pstmt.setString(2, vo.getPassword());
+			pstmt.setString(3, vo.getContent());
 			
 
 			count = pstmt.executeUpdate();
@@ -77,7 +78,7 @@ public class GuestbooksDao {
 			System.out.println("접속성공");
 
 			// 3.SQLE 테스트문
-			String query = "select no, name, content, sysdate from guestbooks order by no desc";
+			String query = "select no, name, content, reg_date from guestbooks order by no desc";
 			pstmt = conn.prepareStatement(query);
 
 			rs = pstmt.executeQuery();
@@ -87,7 +88,7 @@ public class GuestbooksDao {
 				int no = rs.getInt("no");
 				String name = rs.getString("name");// DB에 있는 필드의 이름으로 있어야 계산시 찾아올수있다.
 				String content = rs.getString("content");
-				String date=rs.getString("sysdate");
+				String date=rs.getString("reg_date");
 				
 
 				GuestbooksVo vo = new GuestbooksVo(no, name,content,date);

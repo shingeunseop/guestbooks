@@ -9,7 +9,7 @@
   String name=request.getParameter("ln");
   String password=request.getParameter("ps");
   String content=request.getParameter("co");
-  String date=request.getParameter("d");
+
   
   GuestbooksVo vo=new GuestbooksVo(name,password,content);
   
