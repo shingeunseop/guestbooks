@@ -10,7 +10,7 @@
       GuestbooksVo vo=new GuestbooksVo(password);
       
       GuestbooksDao dao=new GuestbooksDao();
-      dao.insert(vo);
+      dao.delete(vo);
       
       response.sendRedirect("list.jsp");
 

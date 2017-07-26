@@ -17,17 +17,17 @@ pageEncoding="UTF-8"%>
 	<form action="add.jsp" method="post">
 	<table border=1 width=500>
 		<tr>
-			<td>이름</td><td><input type="text" name="ln" value=""></td>
-			<td>비밀번호</td><td><input type="password" name="ps" value=""></td>
+			<td>이름</td>
+			<td><input type="text" name="ln" value=""></td>
+			<td>비밀번호</td>
+			<td><input type="password" name="ps" value=""></td>
 		</tr>
 		<tr>
 			<td colspan=4><textarea type="content" name="co" value="" cols=60 rows=5></textarea></td>
 		</tr>
 		<tr>
 			<td colspan=4 align=right><input type="submit" VALUE=" 확인 "></td>
-			<%
-			String rst=list.add(list.size());
-			%>
+			
 		</tr>
 	</table>
 	</form>
@@ -41,7 +41,7 @@ pageEncoding="UTF-8"%>
 			<td>[<%=vo.getNo() %>]</td>
 			<td><%=vo.getName() %>></td>
 			<td><%=vo.getReg_date() %></td>
-			<td><a href="">삭제</a></td>
+			<td><a href="deleteform.jsp">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan=4><%=vo.getContent() %></td>

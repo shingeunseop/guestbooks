@@ -27,7 +27,7 @@ public class GuestbooksDao {
 			System.out.println("접속성공");
 
 			// 3.SQLE 테스트문
-			String query = "insert into guestbooks values(seq_no.nextval,'?','?','?',sysdate)";
+			String query = "insert into guestbooks values(seq_guestbooks_no.nextval,?,?,?,sysdate)";
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, vo.getName());
 			pstmt.setString(2, vo.getPassword());

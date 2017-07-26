@@ -7,14 +7,14 @@
 <title>타이틀</title>
 </head>
 <body>
-      <form method="post",action="delete.php">
+      <form method="post" action="delete.jsp">
       <input type='hidden' name="id" value="">
-      <table>
+      <table width=410 border=1>
             <tr>
-                 <td>비밀번호</td>
-                 <td><input type="password" name="password"></td>
-                 <td><input type="submit" value="확인. "></td>
-                 <td><a href="">메인으로 돌아가기</a></td>
+                 <td >비밀번호</td>
+                 <td ><input type="password" name="ps" value=""></td>
+                 <td colspan=4 align=right><input type="submit" value="확인. "></td>
+                 <td><a href="list.jsp">메인으로 돌아가기</a></td>
            </tr>
       </table>
       </form>
